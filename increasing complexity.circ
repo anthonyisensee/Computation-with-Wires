@@ -17,6 +17,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool name="NOT Gate">
       <a name="facing" val="south"/>
     </tool>
+    <tool name="AND Gate">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="OR Gate">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="NAND Gate">
+      <a name="facing" val="south"/>
+    </tool>
   </lib>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
@@ -79,53 +88,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(120,310)" to="(180,310)"/>
-    <wire from="(120,400)" to="(180,400)"/>
-    <wire from="(570,350)" to="(620,350)"/>
-    <wire from="(250,340)" to="(310,340)"/>
-    <wire from="(250,310)" to="(250,320)"/>
-    <wire from="(390,350)" to="(390,360)"/>
-    <wire from="(230,390)" to="(280,390)"/>
-    <wire from="(390,330)" to="(390,350)"/>
-    <wire from="(490,320)" to="(490,340)"/>
-    <wire from="(150,330)" to="(150,350)"/>
-    <wire from="(250,320)" to="(250,340)"/>
-    <wire from="(280,360)" to="(280,390)"/>
-    <wire from="(150,350)" to="(150,380)"/>
-    <wire from="(150,330)" to="(180,330)"/>
-    <wire from="(120,350)" to="(150,350)"/>
-    <wire from="(150,380)" to="(180,380)"/>
-    <wire from="(250,310)" to="(410,310)"/>
-    <wire from="(490,340)" to="(520,340)"/>
-    <wire from="(360,350)" to="(390,350)"/>
-    <wire from="(390,330)" to="(410,330)"/>
-    <wire from="(470,320)" to="(490,320)"/>
-    <wire from="(240,320)" to="(250,320)"/>
-    <wire from="(390,360)" to="(520,360)"/>
-    <comp lib="1" loc="(570,350)" name="AND Gate"/>
-    <comp lib="1" loc="(360,350)" name="AND Gate"/>
-    <comp lib="0" loc="(120,350)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="b"/>
-    </comp>
-    <comp lib="0" loc="(620,350)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="z"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(120,400)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="c"/>
-    </comp>
-    <comp lib="1" loc="(240,320)" name="NAND Gate"/>
-    <comp lib="1" loc="(230,390)" name="OR Gate"/>
-    <comp lib="0" loc="(120,310)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="a"/>
-    </comp>
-    <comp lib="1" loc="(310,360)" name="NOT Gate"/>
-    <comp lib="1" loc="(470,320)" name="NOR Gate"/>
   </circuit>
   <circuit name="transistor basics">
     <a name="circuit" val="transistor basics"/>
@@ -691,6 +653,140 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="6" loc="(233,85)" name="Text">
       <a name="text" val="and: only output if both inputs are triggered"/>
+    </comp>
+  </circuit>
+  <circuit name="not/and/or with nand">
+    <a name="circuit" val="not/and/or with nand"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(410,160)" to="(410,230)"/>
+    <wire from="(670,290)" to="(670,300)"/>
+    <wire from="(470,160)" to="(470,230)"/>
+    <wire from="(390,180)" to="(450,180)"/>
+    <wire from="(410,160)" to="(470,160)"/>
+    <wire from="(610,290)" to="(610,300)"/>
+    <wire from="(640,380)" to="(640,390)"/>
+    <wire from="(230,160)" to="(340,160)"/>
+    <wire from="(420,300)" to="(420,320)"/>
+    <wire from="(440,300)" to="(440,320)"/>
+    <wire from="(560,160)" to="(660,160)"/>
+    <wire from="(190,180)" to="(230,180)"/>
+    <wire from="(230,130)" to="(230,160)"/>
+    <wire from="(450,180)" to="(540,180)"/>
+    <wire from="(470,160)" to="(560,160)"/>
+    <wire from="(610,300)" to="(630,300)"/>
+    <wire from="(650,300)" to="(670,300)"/>
+    <wire from="(550,280)" to="(550,390)"/>
+    <wire from="(330,280)" to="(330,390)"/>
+    <wire from="(230,180)" to="(250,180)"/>
+    <wire from="(190,130)" to="(190,180)"/>
+    <wire from="(320,180)" to="(320,230)"/>
+    <wire from="(250,180)" to="(320,180)"/>
+    <wire from="(540,180)" to="(540,230)"/>
+    <wire from="(620,180)" to="(620,230)"/>
+    <wire from="(600,180)" to="(600,230)"/>
+    <wire from="(340,160)" to="(340,230)"/>
+    <wire from="(240,290)" to="(240,300)"/>
+    <wire from="(400,290)" to="(400,300)"/>
+    <wire from="(540,180)" to="(600,180)"/>
+    <wire from="(680,160)" to="(680,230)"/>
+    <wire from="(660,160)" to="(660,230)"/>
+    <wire from="(430,380)" to="(430,390)"/>
+    <wire from="(460,290)" to="(460,300)"/>
+    <wire from="(560,160)" to="(560,230)"/>
+    <wire from="(650,300)" to="(650,320)"/>
+    <wire from="(630,300)" to="(630,320)"/>
+    <wire from="(600,180)" to="(620,180)"/>
+    <wire from="(660,160)" to="(680,160)"/>
+    <wire from="(400,300)" to="(420,300)"/>
+    <wire from="(440,300)" to="(460,300)"/>
+    <wire from="(190,260)" to="(190,300)"/>
+    <wire from="(190,180)" to="(190,230)"/>
+    <wire from="(250,180)" to="(250,230)"/>
+    <wire from="(230,180)" to="(230,230)"/>
+    <wire from="(450,180)" to="(450,230)"/>
+    <wire from="(390,180)" to="(390,230)"/>
+    <wire from="(320,180)" to="(390,180)"/>
+    <wire from="(340,160)" to="(410,160)"/>
+    <comp lib="1" loc="(400,290)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(670,290)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(597,407)" name="Text">
+      <a name="text" val="or"/>
+    </comp>
+    <comp lib="1" loc="(240,290)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(640,380)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(190,130)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="1" loc="(430,380)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="6" loc="(215,315)" name="Text">
+      <a name="text" val="not"/>
+    </comp>
+    <comp lib="1" loc="(460,290)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(610,290)" name="NAND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(240,300)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,390)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(230,130)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="1" loc="(330,280)" name="AND Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(550,390)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(381,403)" name="Text">
+      <a name="text" val="and"/>
+    </comp>
+    <comp lib="0" loc="(330,390)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(550,280)" name="OR Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="1" loc="(190,260)" name="NOT Gate">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(640,390)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
   <circuit name="decoder (2 input)">
